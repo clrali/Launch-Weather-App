@@ -9,7 +9,7 @@ function Coordinates(props) {
   const [city, setCity] = useState("City");
   const [country, setCountry] = useState("Country")
 
-  const apikey = process.env.REACT_APP_api_key; 
+  const apikey = 'c2288a46c35d5fb2af6cd0ea6ad5d503'; 
 
   fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${apikey}`)
   .then(res => res.json())
