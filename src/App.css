@@ -32,6 +32,7 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
   width: 75%;
   padding: 20px;
   appearance: none;
@@ -72,7 +73,6 @@ button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 .location {
   color:aliceblue;
   font-size: 25px;
@@ -81,10 +81,31 @@ button {
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-.weather .metrics {
+.metrics {
   position: relative;
   display: block;
   width: 75%;
+  height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 30px auto; 
+
+  padding: 15px 25px;
+  background-color: rgba(7, 48, 83, 0.2);
+  border-radius: 16px;
+
+  color:aliceblue;
+  font-size: 30px;
+  font-weight: 400;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  text-align: center;
+}
+
+.forecast {
+  position: relative;
+  display: block;
+  width: 75%;
+  height: 50vh;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
