@@ -9,7 +9,7 @@ function CurrentWeather(props) {
   const lon = -77.2818
 
   const [weather, setWeather] = useState([])
-  const apikey = 'f22ab97af3dd7eaa0c46357a0a9dcc53'; 
+  const apikey = '3eabc5a69085757838826afc51201a7c'; 
 
   useEffect(() => {
     // call a seperate api to get the actual weather and stuff using the lat and lon from before

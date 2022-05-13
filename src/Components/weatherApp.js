@@ -16,7 +16,7 @@ function WeatherApp(){
     const [conditions, setConditions] = useState()
     const [feelsLike, setFeelsLike] = useState()
 
-     const apikey = 'f22ab97af3dd7eaa0c46357a0a9dcc53' 
+     const apikey = '3eabc5a69085757838826afc51201a7c' 
 
     const generateCoordinates=() => {
       let label = document.getElementById("submit").innerHTML
@@ -44,6 +44,9 @@ function WeatherApp(){
       document.getElementById("submit").innerHTML = "Get Coordinates"
     }
   }
+
+  const [disabled, setDisabled] = useState(false)
+
 
   return (
     <div className="weather-app">
@@ -91,9 +94,9 @@ function WeatherApp(){
       </div>
 
       <div className="articles">
-      <button onClick={GetNews}>Click here for the latest headlines: </button>
-        <p id="headlines"> 
-        </p>
+        <div id="headlines"> 
+          <button disabled={disabled} onClick={GetNews}>Click here for the latest headlines: </button>
+        </div>
       </div>
     </div>
   )}

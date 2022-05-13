@@ -9,7 +9,7 @@ function Coordinates(props) {
   const [city, setCity] = useState("City");
   const [country, setCountry] = useState("Country")
 
-  const apikey = 'f22ab97af3dd7eaa0c46357a0a9dcc53'; 
+  const apikey = '3eabc5a69085757838826afc51201a7c'; 
 
   useEffect(() => {
     fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${apikey}`)
