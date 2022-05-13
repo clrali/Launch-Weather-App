@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import Coordinates from "./coordinates";
 import CurrentWeather from "./currentWeather"
+import GetNews from "./news";
 
 function WeatherApp(){
-     const [lat, setLat] = useState("38.7894");
-     const [lon, setLon] = useState("-77.2818");
+     const [lat, setLat] = useState("");
+     const [lon, setLon] = useState("");
      const [city, setCity] = useState("City");
      const [country, setCountry] = useState("Country");
      const [zipCode, setZipCode] = useState("");
@@ -15,7 +16,7 @@ function WeatherApp(){
     const [conditions, setConditions] = useState()
     const [feelsLike, setFeelsLike] = useState()
 
-     const apikey = 'c2288a46c35d5fb2af6cd0ea6ad5d503' 
+     const apikey = 'f22ab97af3dd7eaa0c46357a0a9dcc53' 
 
     const generateCoordinates=() => {
       let label = document.getElementById("submit").innerHTML
@@ -45,8 +46,9 @@ function WeatherApp(){
   }
 
   return (
-  <div className="weather-app">
-    <div className="search-box">
+    <div className="weather-app">
+
+      <div className="search-box">
         <input 
           type="text"
           required
@@ -55,7 +57,7 @@ function WeatherApp(){
           onChange={(e) => setZipCode(e.target.value)}
           value={zipCode} />
       </div>
-      
+        
       <div className="search-box">
         <input 
           type="text"
@@ -66,20 +68,32 @@ function WeatherApp(){
           value={countryCode} />
       </div>
 
+      <button id="submit" onClick={generateCoordinates}>Submit</button>
+
       <div className="location">
-        <Coordinates zipcode={zipCode} countrycode={countryCode}/> 
+        <p>{city}, {country}</p>
+        <p>Latitude is: {lat}</p>
+        <p>Longitude is: {lon}</p>
+        {/* <Coordinates zipcode={zipCode} countrycode={countryCode}/>  */}
       </div> 
-      
+        
       <div className="metrics">
         <h1>Currently:</h1>
-        {/* <p>Conditions: {conditions}</p>
-        <p>Temperature: {temp}°F</p>
-        <p>Feels like: {feelsLike}°F</p>
-        <p>Humidity: {humidity}</p> */}
-        <CurrentWeather lat={lat} lon={lon} />
+          {/* <p>Conditions: {conditions}</p>
+          <p>Temperature: {temp}°F</p>
+          <p>Feels like: {feelsLike}°F</p>
+          <p>Humidity: {humidity}</p> */}
+          <CurrentWeather lat={lat} lon={lon} />
       </div>
+
       <div className="forecast">
         <h1>Forecast:</h1>
+      </div>
+
+      <div className="articles">
+      <button onClick={GetNews}>Click here for the latest headlines: </button>
+        <p id="headlines"> 
+        </p>
       </div>
     </div>
   )}
