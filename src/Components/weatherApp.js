@@ -3,8 +3,8 @@ import Coordinates from "./coordinates";
 import CurrentWeather from "./currentWeather"
 
 function WeatherApp(){
-     const [lat, setLat] = useState("...");
-     const [lon, setLon] = useState("...");
+     const [lat, setLat] = useState("38.7894");
+     const [lon, setLon] = useState("-77.2818");
      const [city, setCity] = useState("City");
      const [country, setCountry] = useState("Country");
      const [zipCode, setZipCode] = useState("");
@@ -66,21 +66,17 @@ function WeatherApp(){
           value={countryCode} />
       </div>
 
-      <button id="submit" onClick={generateCoordinates}>Get Coordinates</button>
-
       <div className="location">
-        <p>{city}, {country}</p>
-        <p>Latitude: {lat}</p>
-        <p>Longitude: {lon}</p>
-        {/* <Coordinates zipcode={zipCode} countrycode={countryCode} />  */}
+        <Coordinates zipcode={zipCode} countrycode={countryCode}/> 
       </div> 
       
       <div className="metrics">
         <h1>Currently:</h1>
-        <p>Conditions: {conditions}</p>
+        {/* <p>Conditions: {conditions}</p>
         <p>Temperature: {temp}°F</p>
         <p>Feels like: {feelsLike}°F</p>
-        <p>Humidity: {humidity}</p>
+        <p>Humidity: {humidity}</p> */}
+        <CurrentWeather lat={lat} lon={lon} />
       </div>
       <div className="forecast">
         <h1>Forecast:</h1>

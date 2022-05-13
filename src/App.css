@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(154, 208, 218);
 }
 
 body {
@@ -9,18 +10,9 @@ body {
 }
 
 .weather-app {
-  background: url('./Images/blue-bgimage.jpg');
-  height: 100%;
-  width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   transition: 0.4 ease-out;
-}
-
-main {
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
-  padding: 30px;
 }
 
 .search-box {
@@ -85,14 +77,10 @@ button {
   position: relative;
   display: block;
   width: 75%;
-  height: 30vh;
+  height: 45vh;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
-
-  padding: 15px 25px;
-  background-color: rgba(7, 48, 83, 0.2);
-  border-radius: 16px;
 
   color:aliceblue;
   font-size: 30px;
@@ -105,14 +93,10 @@ button {
   position: relative;
   display: block;
   width: 75%;
-  height: 50vh;
+  height: 80vh;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
-
-  padding: 15px 25px;
-  background-color: rgba(7, 48, 83, 0.2);
-  border-radius: 16px;
 
   color:aliceblue;
   font-size: 30px;
