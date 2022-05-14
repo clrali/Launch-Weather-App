@@ -103,7 +103,7 @@ button {
   position: relative;
   display: block;
   width: 80%;
-  height: 170vh;
+  height: 205vh;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
@@ -146,4 +146,23 @@ img {
 
 p {
   font-weight: bold;
+}
+
+#forecast-info {
+  color:aliceblue;
+  font-size: 25px;
+  font-weight: bold;  
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  background-color: rgba(245, 245, 220, 0.3);
+  border-radius: 30px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+
+#forecast-icon {
+  height: 100px;
+  width: 100px;
 }
