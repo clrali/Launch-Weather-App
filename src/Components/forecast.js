@@ -11,7 +11,7 @@ function Forecast(prop1, prop2) {
   fetch(url)
   .then(res => res.json())
   .then(data => {
-    data.daily.map(d => {
+    data.daily.slice(1,8).map(d => {
       let t = document.createElement('p')
       let temp = document.createElement('p')
       let cond = document.createElement('p')
