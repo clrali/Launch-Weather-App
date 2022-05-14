@@ -1,41 +1,33 @@
-import React, { useState, useEffect } from 'react'
+function CurrentWeather(prop1, prop2) {
+  const lat = prop1.lat;
+  const lon = prop2.lon; 
 
-function CurrentWeather(props) {
-
-  // const lat = props.lat;
-  // const lon = props.lon; 
-
-  const lat = 38.7894
-  const lon = -77.2818
-
-  const [weather, setWeather] = useState([])
   const apikey = '3eabc5a69085757838826afc51201a7c'; 
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${apikey}`
+  let weather = document.getElementById("current-weather")
 
-  useEffect(() => {
-    // call a seperate api to get the actual weather and stuff using the lat and lon from before
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${apikey}`)
-    .then(res => res.json())
-    .then(data => {
-      setWeather([...weather, {
-        temp: data.current.temp,
-        feels: data.current.feels_like, 
-        conditions: data.current.weather[0].main,
-        humidity: data.current.humidity
-      }])
-  }, [lat, lon])
+  // call a seperate api to get the actual weather and stuff using the lat and lon from before
+  fetch(url)
+  .then(res => res.json())
+  .then(data => {
+    let conditions = document.createElement('p')
+    let temp = document.createElement('p')
+    let feels = document.createElement('p')
+    let humidity = document.createElement('p')
 
-  console.log({weather})
+    conditions.innerHTML = "Conditions: " + data.current.weather[0].main
+    weather.appendChild(conditions)
+
+    temp.innerHTML = "Temperature: " + data.current.temp + '°F'
+    weather.appendChild(temp)
+
+    feels.innerHTML = "Feels like: " + data.current.feels_like + '°F'
+    weather.appendChild(feels)
+
+    humidity.innerHTML = "Humidity: " + data.current.humidity + "%"
+    weather.appendChild(humidity)
+
   })
-
-  return (
-    <div>
-      <p>Temperature: {weather.temp}°F</p>
-      <p>Feels Like: {weather.feels}°F </p>
-      <p>Conditions: {weather.conditions} </p>
-      <p>Humidity: {weather.humidity} </p>
-
-    </div>
-  )
 }
 
 export default CurrentWeather

@@ -68,6 +68,11 @@ button {
 }
 
 .location {
+  background-color: rgb(206, 174, 127, 0.2);
+  border-radius: 30px;
+  width: 80%;
+  height: 18vh;
+  margin: auto;
   color:aliceblue;
   font-size: 25px;
   font-weight: 500;
@@ -75,14 +80,17 @@ button {
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-.metrics {
+#current-weather {
   position: relative;
   display: block;
-  width: 75%;
-  height: 45vh;
+  width: 80%;
+  height: 40vh;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
+
+  background-color: rgb(206, 174, 127, 0.2);
+  border-radius: 30px;
 
   color:aliceblue;
   font-size: 30px;
@@ -91,14 +99,17 @@ button {
   text-align: center;
 }
 
-.forecast {
+#forecast {
   position: relative;
   display: block;
-  width: 75%;
-  height: 80vh;
+  width: 80%;
+  height: 170vh;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
+
+  background-color: rgb(206, 174, 127, 0.2);
+  border-radius: 30px;
 
   color:aliceblue;
   font-size: 30px;
