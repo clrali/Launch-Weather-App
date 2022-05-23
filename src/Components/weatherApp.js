@@ -60,8 +60,8 @@ function WeatherApp(){
 
       <div className="location">
         <p>{city}, {country}</p>
-        <p>Latitude is: {lat}</p>
-        <p>Longitude is: {lon}</p>
+        <p>Latitude is: {lat}°</p>
+        <p>Longitude is: {lon}°</p>
       </div> 
         
       <div id="current-weather">

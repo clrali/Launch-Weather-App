@@ -10,7 +10,6 @@ body {
 }
 
 .weather-app {
-  background-color: rgb(154, 208, 218);
   background-size: contain;
   background-position: center;
   margin: auto;
@@ -25,7 +24,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 10px; */
+  margin-top: 10px;
   width: 75%;
   padding: 20px;
   appearance: none;
@@ -57,64 +56,67 @@ button {
   background-color: rgb(211, 184, 230);
   font-size: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: aliceblue;
+  color:rgb(81, 116, 146);
 }
 
 ::placeholder {
-  color: aliceblue;
+  color:rgb(81, 116, 146);
   font-size: large;
   text-align: left;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .location {
-  background-color: rgb(206, 174, 127, 0.2);
+  background-color: rgb(211, 184, 230, 0.2);
   border-radius: 30px;
-  width: 80%;
-  height: 18vh;
+  width: 75%;
+  height: auto;
   margin: auto;
-  color:aliceblue;
+  padding-bottom: 10px;
+  color:rgb(81, 116, 146);
   font-size: 25px;
   font-weight: 500;
   text-align: center;
-  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.2);
 }
 
 #current-weather {
   position: relative;
   display: block;
-  width: 80%;
-  height: 40vh;
+  width: 75%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
+  padding-bottom: 10px;
 
-  background-color: rgb(206, 174, 127, 0.2);
+  background-color: rgb(211, 184, 230, 0.2);
   border-radius: 30px;
 
-  color:aliceblue;
+  color:rgb(81, 116, 146);
   font-size: 30px;
   font-weight: 400;
-  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.2);
   text-align: center;
 }
 
 #forecast {
   position: relative;
   display: block;
-  width: 80%;
-  height: 205vh;
+  width: 75%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   margin: 30px auto; 
+  padding-bottom: 10px;
 
-  background-color: rgb(206, 174, 127, 0.2);
+  background-color: rgb(211, 184, 230, 0.2);
   border-radius: 30px;
 
-  color:aliceblue;
+  color:rgb(81, 116, 146);
   font-size: 30px;
   font-weight: 400;
-  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.2);
   text-align: center;
 }
 
@@ -136,9 +138,9 @@ img {
 }
 
 #headlines {
-  background-color: rgb(206, 174, 127, 0.2);
+  background-color: rgb(211, 184, 230, 0.2);
   border-radius: 30px;
-  width: 80%;
+  width: 75%;
   height: 90%;
   padding: 20px;
   margin: auto;
@@ -149,12 +151,12 @@ p {
 }
 
 #forecast-info {
-  color:aliceblue;
+  color:rgb(81, 116, 146);
   font-size: 25px;
   font-weight: bold;  
   text-align: center;
-  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-  background-color: rgba(245, 245, 220, 0.3);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.2);
+  background-color: rgba(152, 106, 185, 0.2);
   border-radius: 30px;
   width: 55%;
   margin-left: auto;
