@@ -3,7 +3,7 @@ import React from 'react'
 function Forecast(prop1, prop2) {
   const lat = prop1.lat
   const lon = prop2.lon
-  const apikey = '3eabc5a69085757838826afc51201a7c'
+  const apikey = process.env.REACT_APP_API_KEY
 
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${apikey}`
   let forecast = document.getElementById("forecast")

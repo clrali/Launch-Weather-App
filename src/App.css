@@ -36,10 +36,8 @@ body {
   border-radius: 20px;
   box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
 
-  color:rgb(0, 0, 0);
   font-size: 20px;
   text-align: left;
-
 }
 
 button {
@@ -141,7 +139,7 @@ img {
   background-color: rgb(211, 184, 230, 0.2);
   border-radius: 30px;
   width: 75%;
-  height: 90%;
+  height: auto;
   padding: 20px;
   margin: auto;
 }

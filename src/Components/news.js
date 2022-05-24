@@ -3,6 +3,7 @@ function GetNews() {
     let url = `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${newsapikey}`
     let headlines = document.getElementById("headlines")
 
+    console.log("entered")
     fetch(url)
     .then(res => res.json())
     .then(data => {

@@ -10,7 +10,7 @@ function WeatherApp(){
     const [country, setCountry] = useState("Country");
     const [zipCode, setZipCode] = useState("");
     const [countryCode, setCountryCode] = useState("");
-    const apikey = '3eabc5a69085757838826afc51201a7c' 
+    const apikey = process.env.REACT_APP_API_KEY 
 
     const generateCoordinates=() => {
 
